@@ -8,13 +8,14 @@ hash_function = "MD5"  # You can change to "BLAKE2", "DJB2", or "SHA3-256"
 
 while True:
     # Static keys
-    special_key_open = "0123456789"
-    special_key_closed = "9876543210"
-    # Time-based key
-    special_datetime_key = strftime("%y%m%d%H%M%S")
-
+    #A fixed public key that represents the unique public identity.
+    public_static_key = "0123456789"
+    #A unique secret key that represents the secret password.
+    private_static_key = "9876543210"
+    # Dynamic key that is constantly changing based on real-time time and date.
+    dynamic_time_key = strftime("%y%m%d%H%M%S")
     # Combine keys and datetime string
-    combined_string = special_key_open + special_key_closed + special_datetime_key
+    combined_string = public_static_key + private_static_key + dynamic_time_key
 
     # Apply selected hash function
     if hash_function == "SHA3-256":
@@ -32,6 +33,7 @@ while True:
     else:
         raise ValueError("Unsupported hash function type")
 
-    # Print the resulting hash, updating every second
+  # Print the resulting hash, updating every second
     print(result_hash, end="\r", flush=True)
     time.sleep(1)
+
