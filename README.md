@@ -27,4 +27,4 @@ Special thanks to the following open-source resources that supported the develop
     GeeksforGeeks: SHA Hash Functions in Python
     Replit Project by Jamal Mubaraky: Absherthon Prototype
 
-This translation preserves the main structure and intent while ensuring clarity and professionalism for an international audience
+This translation preserves the main structure and intent while ensuring clarity and professionalism for an international audience (by:chatgpt)
